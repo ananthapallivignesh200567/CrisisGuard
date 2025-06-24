@@ -1,0 +1,730 @@
+/* Emergency Center Styles */
+.emergency-center {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    color: #333;
+    background-color: #f8fafc;
+    min-height: 100vh;
+  }
+  
+  /* Header Styles */
+  .emergency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);
+    color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(220, 38, 38, 0.2);
+  }
+  
+  .emergency-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .location-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    font-weight: 500;
+  }
+  
+  /* Emergency Actions Section */
+  .emergency-actions {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .emergency-actions h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .action-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+  
+  .emergency-btn {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+  
+  .emergency-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .emergency-btn:active {
+    transform: translateY(0);
+  }
+  
+  .emergency-btn.police {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  }
+  
+  .emergency-btn.fire {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+  }
+  
+  .emergency-btn.medical {
+    background: linear-gradient(135deg, #dc2626, #b91c1c);
+  }
+  
+  .emergency-btn.poison {
+    background: linear-gradient(135deg, #10b981, #059669);
+  }
+  
+  .emergency-btn div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .emergency-btn strong {
+    font-size: 1.1rem;
+  }
+  
+  .emergency-btn span {
+    font-size: 0.9rem;
+    opacity: 0.9;
+  }
+  
+  /* Active Emergencies Section */
+  .active-emergencies {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 2px solid #fef2f2;
+  }
+  
+  .active-emergencies h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #dc2626;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .active-emergencies h2::before {
+    content: '🚨';
+    font-size: 1.2rem;
+  }
+  
+  .emergency-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .emergency-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid;
+    background: #fefefe;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+  }
+  
+  .emergency-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+  
+  .emergency-card.active {
+    background: linear-gradient(135deg, #fef2f2 0%, #fff 100%);
+  }
+  
+  .emergency-icon {
+    flex-shrink: 0;
+    padding: 12px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.8);
+  }
+  
+  .emergency-content {
+    flex: 1;
+  }
+  
+  .emergency-content .emergency-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+  }
+  
+  .emergency-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .severity-badge {
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .severity-badge.low {
+    background: #dcfce7;
+    color: #166534;
+  }
+  
+  .severity-badge.medium {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .severity-badge.high {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .severity-badge.critical {
+    background: #fecaca;
+    color: #7f1d1d;
+  }
+  
+  .emergency-content p {
+    margin: 8px 0;
+    color: #64748b;
+    line-height: 1.5;
+  }
+  
+  .emergency-meta {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 12px 0;
+    font-size: 0.9rem;
+    color: #64748b;
+  }
+  
+  .timestamp {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .status {
+    padding: 4px 8px;
+    background: #f1f5f9;
+    border-radius: 6px;
+    font-weight: 500;
+  }
+  
+  .emergency-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 12px;
+  }
+  
+  .action-tag {
+    padding: 4px 10px;
+    background: #eff6ff;
+    color: #1e40af;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  .resolve-btn {
+    padding: 10px 20px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    align-self: flex-start;
+  }
+  
+  .resolve-btn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+  }
+  
+  /* Emergency Contacts Section */
+  .emergency-contacts {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .section-header h2 {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .add-contact-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .add-contact-btn:hover {
+    background: #2563eb;
+    transform: translateY(-1px);
+  }
+  
+  /* Contact Form Overlay */
+  .contact-form-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .contact-form {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .contact-form h3 {
+    margin: 0 0 24px 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1e293b;
+    text-align: center;
+  }
+  
+  .contact-form input,
+  .contact-form select {
+    width: 100%;
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+  }
+  
+  .contact-form input:focus,
+  .contact-form select:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    gap: 12px;
+    justify-content: flex-end;
+    margin-top: 24px;
+  }
+  
+  .form-actions button {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .form-actions button[type="button"] {
+    background: #f1f5f9;
+    color: #64748b;
+  }
+  
+  .form-actions button[type="button"]:hover {
+    background: #e2e8f0;
+  }
+  
+  .form-actions button[type="submit"] {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .form-actions button[type="submit"]:hover {
+    background: #2563eb;
+  }
+  
+  /* Contacts Grid */
+  .contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
+  }
+  
+  .contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #fafafa;
+    border: 2px solid #f1f5f9;
+    border-radius: 12px;
+    transition: all 0.2s ease;
+  }
+  
+  .contact-card:hover {
+    border-color: #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .contact-info h4 {
+    margin: 0 0 4px 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .contact-info p {
+    margin: 0 0 8px 0;
+    color: #64748b;
+    font-weight: 500;
+  }
+  
+  .relationship {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #f0f9ff;
+    color: #0369a1;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  
+  .priority {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+  
+  .priority-1 {
+    background: #fee2e2;
+    color: #991b1b;
+  }
+  
+  .priority-2 {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  .priority-3 {
+    background: #f0f9ff;
+    color: #1e40af;
+  }
+  
+  .call-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background: #10b981;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .call-btn:hover {
+    background: #059669;
+    transform: translateY(-1px);
+  }
+  
+  /* Emergency History Section */
+  .emergency-history {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+  }
+  
+  .emergency-history h2 {
+    margin: 0 0 20px 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .history-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: #fafafa;
+    border-radius: 10px;
+    border-left: 3px solid #e2e8f0;
+    transition: all 0.2s ease;
+  }
+  
+  .history-item:hover {
+    background: #f1f5f9;
+    border-left-color: #94a3b8;
+  }
+  
+  .history-icon {
+    flex-shrink: 0;
+    padding: 8px;
+    background: white;
+    border-radius: 8px;
+    color: #64748b;
+  }
+  
+  .history-content {
+    flex: 1;
+  }
+  
+  .history-content h4 {
+    margin: 0 0 4px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  
+  .history-content p {
+    margin: 0 0 8px 0;
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .history-content .timestamp {
+    font-size: 0.8rem;
+    color: #94a3b8;
+  }
+  
+  .history-item .status {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    align-self: flex-start;
+  }
+  
+  .status.resolved {
+    background: #dcfce7;
+    color: #166534;
+  }
+  
+  .status.pending {
+    background: #fef3c7;
+    color: #92400e;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .emergency-center {
+      padding: 16px;
+    }
+  
+    .emergency-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
+    }
+  
+    .emergency-header h1 {
+      font-size: 2rem;
+    }
+  
+    .action-buttons {
+      grid-template-columns: 1fr;
+    }
+  
+    .emergency-btn {
+      padding: 16px;
+    }
+  
+    .emergency-card {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .emergency-content .emergency-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+  
+    .contacts-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .contact-card {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  
+    .section-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+    }
+  
+    .contact-form {
+      margin: 10px;
+      padding: 24px;
+    }
+  
+    .form-actions {
+      flex-direction: column;
+    }
+  
+    .history-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .emergency-header h1 {
+      font-size: 1.8rem;
+    }
+  
+    .emergency-actions h2,
+    .section-header h2,
+    .emergency-history h2 {
+      font-size: 1.5rem;
+    }
+  
+    .emergency-btn {
+      font-size: 0.9rem;
+    }
+  
+    .contact-form {
+      padding: 20px;
+    }
+  }
+  
+  /* Accessibility Improvements */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+      animation: none !important;
+    }
+  }
+  
+  /* High contrast mode support */
+  @media (prefers-contrast: high) {
+    .emergency-center {
+      background-color: white;
+    }
+  
+    .emergency-btn,
+    .add-contact-btn,
+    .call-btn,
+    .resolve-btn {
+      border: 2px solid currentColor;
+    }
+  }
+  
+  /* Focus styles for accessibility */
+  button:focus,
+  input:focus,
+  select:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+  }
+  
+  /* Print styles */
+  @media print {
+    .emergency-center {
+      background: white;
+      color: black;
+    }
+  
+    .emergency-btn,
+    .add-contact-btn,
+    .call-btn,
+    .resolve-btn {
+      background: white !important;
+      color: black !important;
+      border: 1px solid black !important;
+    }
+  
+    .contact-form-overlay {
+      display: none;
+    }
+  }
+  

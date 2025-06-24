@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import './App.css';
-
+import Settings from './components/Settings';
 // Components
 import Navbar from './components/Navbar';
 import Dashboard from './components/Dashboard';
 import HealthMonitoring from './components/HealthMonitoring';
 import FamilyCenter from './components/FamilyCenter';
 import EmergencyCenter from './components/EmergencyCenter';
-import Settings from './components/Settings';
+
 import Login from './components/Auth/Login';
 import Register from './components/Auth/Register';
 
@@ -158,7 +158,7 @@ function App() {
                 <Route path="/health" element={<HealthMonitoring user={user} />} />
                 <Route path="/family" element={<FamilyCenter user={user} />} />
                 <Route path="/emergency" element={<EmergencyCenter user={user} />} />
-                <Route path="/settings" element={<Settings user={user} />} />
+                <Route path="/Settings" element={<Settings user={user} />} />
                 <Route path="*" element={<Navigate to="/" />} />
               </Routes>
             </main>
